@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using PaymentAPI.Models;
 using PaymentAPI.Services;
-//use abstraction
+
 namespace PaymentAPI.Controllers
 {
     [ApiController]
-    [Route("api/payment")]
+    [Route("api/[controller]")]
     public class PaymentController : ControllerBase
     {
         private readonly PaymentServiceResolver _resolver;
@@ -15,10 +16,15 @@ namespace PaymentAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Pay(string type, decimal amount)
+        public IActionResult ProcessPayment([FromBody] PaymentRequest request)
         {
-            var service = _resolver.Resolve(type);
-            var result = service.Pay(amount);
+            if (request.Amount<=0)
+            {
+                return BadRequest("Amount must be greater than zero");
+            }
+
+            var service = _resolver.Resolve(request.Type);
+            var result = service.ProcessPayment(request.Amount);
             return Ok(result);
         }
     }

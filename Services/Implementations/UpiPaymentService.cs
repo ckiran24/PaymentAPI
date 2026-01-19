@@ -4,9 +4,11 @@ namespace PaymentAPI.Services.Implementations
 {
     public class UpiPaymentService : IPaymentService
     {
-        public string Pay(decimal amount)
+        public string PaymentType => "upi";
+
+        public string ProcessPayment(decimal amount)
         {
-            return $"Payment of ₹{amount} processed using UPI";
+            return $"UPI payment of ₹{amount} processed";
         }
     }
 }

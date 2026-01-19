@@ -1,19 +1,29 @@
 using PaymentAPI.Services.Interfaces;
-using PaymentAPI.Services.Implementations;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace PaymentAPI.Services
 {
-    // Resolves payment service based on payment type
     public class PaymentServiceResolver
     {
-        public IPaymentService Resolve(string paymentType)
+        private readonly IEnumerable<IPaymentService> _services;
+
+        public PaymentServiceResolver(IEnumerable<IPaymentService> services)
         {
-            return paymentType.ToLower() switch
-            {
-                "card" => new CardPaymentService(),
-                "upi" => new UpiPaymentService(),
-                _ => throw new ArgumentException("Invalid payment type")
-            };
+            _services = services;
+        }
+
+        public IPaymentService Resolve(string type)
+        {
+            var service = _services.FirstOrDefault(
+                s => s.PaymentType.Equals(type, StringComparison.OrdinalIgnoreCase)
+            );
+
+            if (service == null)
+                throw new ArgumentException("Invalid payment type");
+
+            return service;
         }
     }
 }

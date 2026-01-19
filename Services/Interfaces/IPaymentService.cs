@@ -2,6 +2,7 @@ namespace PaymentAPI.Services.Interfaces
 {
     public interface IPaymentService
     {
-        string Pay(decimal amount);
+        string PaymentType { get; }   // "card", "upi
+        string ProcessPayment(decimal amount);
     }
 }

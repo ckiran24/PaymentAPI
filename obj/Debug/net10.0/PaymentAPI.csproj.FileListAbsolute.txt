@@ -19,6 +19,7 @@ C:\Users\conta\OneDrive\Desktop\Payment(.NET+React)\backend\PaymentAPI\obj\Debug
 C:\Users\conta\OneDrive\Desktop\Payment(.NET+React)\backend\PaymentAPI\obj\Debug\net10.0\PaymentAPI.csproj.CoreCompileInputs.cache
 C:\Users\conta\OneDrive\Desktop\Payment(.NET+React)\backend\PaymentAPI\obj\Debug\net10.0\PaymentAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\conta\OneDrive\Desktop\Payment(.NET+React)\backend\PaymentAPI\obj\Debug\net10.0\PaymentAPI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\conta\OneDrive\Desktop\Payment(.NET+React)\backend\PaymentAPI\obj\Debug\net10.0\PaymentAPI.sourcelink.json
 C:\Users\conta\OneDrive\Desktop\Payment(.NET+React)\backend\PaymentAPI\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\conta\OneDrive\Desktop\Payment(.NET+React)\backend\PaymentAPI\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\conta\OneDrive\Desktop\Payment(.NET+React)\backend\PaymentAPI\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json

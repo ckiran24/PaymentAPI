@@ -4,9 +4,11 @@ namespace PaymentAPI.Services.Implementations
 {
     public class CardPaymentService : IPaymentService
     {
-        public string Pay(decimal amount)
+        public string PaymentType => "card";
+
+        public string ProcessPayment(decimal amount)
         {
-            return $"Payment of ₹{amount} processed using Card";
+            return $"Card payment of ₹{amount} processed";
         }
     }
 }
