@@ -27,13 +27,8 @@ Services are registered using ASP.NET Core's built-in DI container
 with scoped lifetime.
 
 ## Project Structure
-PaymentAPI
-├── Controllers
-├── Services
-│ ├── Interfaces
-│ └── Implementations
-├── Models
-└── Program.cs
+<img width="359" height="389" alt="image" src="https://github.com/user-attachments/assets/6ea7193c-6ec2-4d39-8e0b-e1132f24db11" />
+
 
 
 ## How to Run
