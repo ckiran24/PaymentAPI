@@ -27,3 +27,26 @@ Services are registered using ASP.NET Core's built-in DI container
 with scoped lifetime.
 
 ## Project Structure
+PaymentAPI
+├── Controllers
+├── Services
+│ ├── Interfaces
+│ └── Implementations
+├── Models
+└── Program.cs
+
+
+## How to Run
+1. Navigate to backend/PaymentAPI
+2. Run `dotnet run`
+3. Open Swagger at `http://localhost:<port>/swagger`
+
+## Example API Usage
+- Endpoint: POST /api/payment
+- Parameters:
+  - type: card | upi
+  - amount: decimal
+
+## Purpose
+This project was created to demonstrate clean backend design,
+OOPS principles, and dependency injection in .NET.
